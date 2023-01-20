@@ -6,4 +6,9 @@ fun main(){
         if(x!=null){
             list.add(x)
         }
-}}
+}
+println("the 5 nos in reverse order are:")
+    for(i in list.size - 1 downTo 0){
+        println(list[i])
+    }
+}
