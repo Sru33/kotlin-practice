@@ -14,3 +14,18 @@ fun main() {
         b = sum
     }
 }
+//largest number in an array
+fun main(){
+    println("enter the array size")
+    var n= readLine()?.toInt()
+    if(n!=null){
+        println("enter the array elements")
+val myArray= Array<Int>(n){ readLine()?.toInt() !!}
+    var largest=myArray[0]
+    for(i in 1..n-1){
+        if(myArray[i]>largest){
+            largest=myArray[i]
+        }
+    }
+    println("$largest")
+}}
