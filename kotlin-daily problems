@@ -29,3 +29,16 @@ val myArray= Array<Int>(n){ readLine()?.toInt() !!}
     }
     println("$largest")
 }}
+//sum of even and odd nos in an array
+fun main(){
+var sume=0
+var sumo=0
+val myArray=arrayOf(1,2,3,4,5)
+for(i in myArray){
+if(i%2==0){
+sume+=i}
+else{
+sumo+=i}
+println("the sum of even nos is $sume and sum of odd nos is $sumo")
+}}
+else
