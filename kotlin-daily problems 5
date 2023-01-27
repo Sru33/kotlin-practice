@@ -1,0 +1,55 @@
+//number of vowels and consonants in a sentence
+fun main(args: Array<String>) {
+    var line = "my kotlin practice problem."
+    var vowels = 0
+    var consonants = 0
+    var digits = 0
+    var spaces = 0
+
+    line = line.toLowerCase()
+    for (i in 0..line.length - 1) {
+        val ch = line[i]
+        if (ch == 'a' || ch == 'e' || ch == 'i'
+                || ch == 'o' || ch == 'u') {
+            ++vowels
+        } else if (ch in 'a'..'z') {
+            ++consonants
+        } else if (ch in '0'..'9') {
+            ++digits
+        } else if (ch == ' ') {
+            ++spaces
+        }
+    }
+    println("Vowels: $vowels")
+    println("Consonants: $consonants")
+    println("Digits: $digits")
+    println("White spaces: $spaces")
+}
+    //largest number in an array
+    fun main(args: Array<String>) {
+    val numArray = doubleArrayOf(23.4, -34.5, 50.0, 33.5, 55.5, 43.7, 5.7, -66.5)
+    var largest = numArray[0]
+
+    for (num in numArray) {
+        if (largest < num)
+            largest = num
+    }
+
+    println("Largest element = %.2f".format(largest))
+}
+//GCD of two numbers
+fun main(args: Array<String>) {
+    val n1 = 96
+    val n2 = 15
+    var gcd = 1
+
+    var i = 1
+    while (i <= n1 && i <= n2) {
+        // Checks if i is factor of both integers
+        if (n1 % i == 0 && n2 % i == 0)
+            gcd = i
+        ++i
+    }
+
+    println("G.C.D of $n1 and $n2 is $gcd")
+}
