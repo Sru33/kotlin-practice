@@ -1,0 +1,41 @@
+//leap year
+fun main(args: Array<String>) {
+
+    val year = 1900
+    var leap = false
+
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            leap = year % 400 == 0
+        } else
+            leap = true
+    } else
+        leap = false
+
+    println(if (leap) "$year is a leap year." else "$year is not a leap year.")
+}
+//reverse a number
+fun main(args: Array<String>) {
+    var num = 6789
+    var reversed = 0
+
+    while (num != 0) {
+        val digit = num % 10
+        reversed = reversed * 10 + digit
+        num /= 10
+    }
+
+    println("Reversed Number: $reversed")
+}
+//number of digits in an integer
+fun main(args: Array<String>) {
+    var count = 0
+    var num = 12345678
+
+    while (num != 0) {
+        num /= 10
+        ++count
+    }
+
+    println("Number of digits: $count")
+}
