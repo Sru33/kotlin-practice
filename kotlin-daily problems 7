@@ -1,0 +1,68 @@
+//transpose of a matrix
+fun main(args: Array<String>) {
+    val row = 2
+    val column = 3
+    val matrix = arrayOf(intArrayOf(2, 3, 4), intArrayOf(5, 6, 4))
+
+    
+    display(matrix)
+
+    
+    val transpose = Array(column) { IntArray(row) }
+    for (i in 0..row - 1) {
+        for (j in 0..column - 1) {
+            transpose[j][i] = matrix[i][j]
+        }
+    }
+
+    
+    display(transpose)
+}
+
+fun display(matrix: Array) {
+    println("The matrix is: ")
+    for (row in matrix) {
+        for (column in row) {
+            print("$column    ")
+        }
+        println()
+    }
+}
+//concatinate two arrays
+fun main(args: Array<String>) {
+    val array1 = intArrayOf(1, 2, 3)
+    val array2 = intArrayOf(4, 5, 6)
+
+    val aLen = array1.size
+    val bLen = array2.size
+    val result = IntArray(aLen + bLen)
+
+    System.arraycopy(array1, 0, result, 0, aLen)
+    System.arraycopy(array2, 0, result, aLen, bLen)
+
+    println(Arrays.toString(result))
+}
+//add two matrices
+fun main(args: Array<String>) {
+    val rows = 2
+    val columns = 3
+    val firstMatrix = arrayOf(intArrayOf(7, 3, 0), intArrayOf(5, 2, 2))
+    val secondMatrix = arrayOf(intArrayOf(-4, 4, 3), intArrayOf(5, 4, 3))
+
+    
+    val sum = Array(rows) { IntArray(columns) }
+    for (i in 0..rows - 1) {
+        for (j in 0..columns - 1) {
+            sum[i][j] = firstMatrix[i][j] + secondMatrix[i][j]
+        }
+    }
+
+    
+    println("Sum of two matrices is: ")
+    for (row in sum) {
+        for (column in row) {
+            print("$column    ")
+        }
+        println()
+    }
+}
