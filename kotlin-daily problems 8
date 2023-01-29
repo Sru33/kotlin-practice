@@ -1,0 +1,70 @@
+//
+    *
+   **
+  ***
+ ****
+*****
+fun main() {
+
+    for (i in 1..5) {
+
+        for(k in i..(5-1))
+         {
+                   print(" ")
+ 
+        }
+        
+        for (j in 1..i) {
+            print("*")
+        }
+      println()
+    }    
+}
+//
+11111
+22222
+33333
+44444
+55555
+fun main() {
+
+      for(i in 1..5)
+        {
+        for(j in 1..5)
+        {
+            print(i)
+        }
+        println()
+    }
+    
+}
+//
+1234554321
+1234**4321
+123****321
+12******21
+1********1
+fun main() {
+
+ for (i in 1..5) {
+     
+        for (j in 1..5-i+1) {
+            print("$j")
+        }
+            for(k in 5 downTo(5-i+2))
+        {
+        print("*")
+       }
+        
+         for(k in 0..(i-2))
+        {
+             print("*")
+ 
+        }
+        
+         for (j in i..5) {
+            print("${5-j+1}")
+        }
+        println()
+    } 
+    }
